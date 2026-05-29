@@ -8,7 +8,7 @@ SRC = *.c
 .PHONY: all clean
 
 all:
-	$(CC) $(CFLAGS) -o main.exe $(SRC) $(LDFLAGS) && main.exe
+	$(CC) $(CFLAGS) -o Displace.exe $(SRC) $(LDFLAGS) && Displace.exe
  
 clean:
 	del /Q  *.o main.exe

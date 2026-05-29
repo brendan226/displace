@@ -1,20 +1,12 @@
 # Displace
 
-A minimal Vulkan display driver for Windows. No frameworks, no bloat — just a raw Win32 window, a manually loaded Vulkan ICD, and direct GPU access.
-
-## What it is
-
-Displace is a bare-metal Vulkan display layer designed as the foundation for a game engine that uses Vulkan for presentation and CUDA for rendering and GPU communication. It exists because Nvidia doesn't expose the same low-level driver access AMD does — this bridges that gap using CUDA as the access layer Nvidia walls off.
+A minimal display driver for Windows. From here you can pretty much do whatever you want. Only thing I wanted to do was figure out what was the bare minimum to get pixels to the screen without allocating everything under the sun. Displace is a small Vulkan display layer for any windows appilcation that needs pixels on the screen without the bloat.  
 
 ## Memory footprint
 
-| State | Working set |
+| State |
 |---|---|
-| Cold load, no trim | ~67 MB |
-| Steady state render loop | ~14 MB |
-| Post-init trim (`EmptyWorkingSet`) | ~14 MB |
-
-The 67 MB spike is almost entirely the Nvidia ICD loading. After init pages are evicted, the steady state render cost is ~14 MB — the true runtime cost of a Vulkan window actively presenting frames on Windows with Nvidia.
+| Post-init | ~2 MB |
 
 ## Red pixels demo
 
@@ -24,22 +16,11 @@ First rendered output — a full screen clear to red via `vkCmdClearColorImage`,
 
 ## Runtime memory
 
-Task manager showing the 14 MB working set during active rendering after post-init trim.
+Runtime for red pixels
 
-![Runtime memory](screenshots/runtime.png)
+![Runtime memory](screenshots/runtime2.png)
 
-## Usage
-
-```c
-// create your window first
-HWND hwnd = CreateWindowEx(...);
-
-// hand it to the driver
-s2_load_vulkan(hwnd, hInstance);
-
-// display context is now ready
-// display.device, display.swapchain, display.queues etc
-```
+Loading driver only
 
 ## Build
 
