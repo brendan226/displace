@@ -4,16 +4,7 @@ A minimal Vulkan display driver for Windows. No frameworks, no bloat — just a 
 
 ## What it is
 
-S2 is a bare-metal Vulkan display layer designed as the foundation for a game engine that uses Vulkan for presentation and CUDA for rendering and GPU communication. It exists because Nvidia doesn't expose the same low-level driver access AMD does — this bridges that gap using CUDA as the access layer Nvidia walls off.
-
-## Design goals
-
-- No dynamic linking overhead beyond what Windows forces on you
-- No validation layers, no debug utils, no implicit extensions
-- Manual function pointer loading via `GetProcAddress` — zero implicit Vulkan linkage
-- Custom allocator hooked into every Vulkan call
-- Stack allocation everywhere possible, no heap fragmentation
-- Working set trimmed post-init so loader pages don't sit resident during the render loop
+Displace is a bare-metal Vulkan display layer designed as the foundation for a game engine that uses Vulkan for presentation and CUDA for rendering and GPU communication. It exists because Nvidia doesn't expose the same low-level driver access AMD does — this bridges that gap using CUDA as the access layer Nvidia walls off.
 
 ## Memory footprint
 
