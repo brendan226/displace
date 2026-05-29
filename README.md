@@ -1,7 +1,6 @@
 # Displace
 
-A minimal display driver for Windows. From here you can pretty much do whatever you want. Only thing I wanted to do was figure out what was the bare minimum to get pixels to the screen without allocating everything under the sun. Displace is a small Vulkan display layer for any windows appilcation that needs pixels on the screen without the bloat.  
-
+A minimal display driver for Windows. From here you can pretty much do whatever you want. Only thing I wanted to do was figure out what was the bare minimum to get pixels to the screen without allocating everything under the sun.
 ## Memory footprint
 
 | State | Working set |
@@ -21,15 +20,9 @@ Runtime for red pixels
 
 ![Runtime memory](screenshots/runtime.png)
 
-cost of loading driver only
+Runtime for driver only
 
 ![Runtime memory](screenshots/runtime2.png)
-
-## Build
-
-```bash
-gcc -Ivulkan/Include -o main.exe *.c -Lvulkan/Lib -lgdi32 -luser32 -ldwmapi -lpsapi
-```
 
 ## Platform
 
