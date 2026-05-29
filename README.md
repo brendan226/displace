@@ -4,8 +4,9 @@ A minimal display driver for Windows. From here you can pretty much do whatever 
 
 ## Memory footprint
 
-| State |
+| State | Working set |
 |---|---|
+| render loop (red pixels)| ~14 MB |
 | Post-init | ~2 MB |
 
 ## Red pixels demo
