@@ -13,7 +13,7 @@ A minimal display driver for Windows. From here you can pretty much do whatever 
 
 First rendered output — a full screen clear to red via `vkCmdClearColorImage`, no shader pipeline required.
 
-![Red pixels](screenshots/hello.png)
+![Red pixels](screenshots/ok.png)
 
 ## Runtime memory
 
