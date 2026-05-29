@@ -1,5 +1,6 @@
 # Vulkan SDK files — include in release manually
-vulkan/
+vulkan
+screenshots
 
 # Build output
 *.exe
