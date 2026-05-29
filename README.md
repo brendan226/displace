@@ -18,9 +18,11 @@ First rendered output — a full screen clear to red via `vkCmdClearColorImage`,
 
 Runtime for red pixels
 
-![Runtime memory](screenshots/runtime2.png)
+![Runtime memory](screenshots/runtime.png)
 
-Loading driver only
+cost of loading driver only
+
+![Runtime memory](screenshots/runtime2.png)
 
 ## Build
 
