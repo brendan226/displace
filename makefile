@@ -4,11 +4,12 @@ CC = gcc
 CFLAGS = -Ivulkan/Include
 LDFLAGS = -Lvulkan/Lib -lgdi32 -luser32 -ldwmapi -lpsapi
 SRC = *.c
+BINARY = Displace.exe
 
 .PHONY: all clean
 
 all:
-	$(CC) $(CFLAGS) -o Displace.exe $(SRC) $(LDFLAGS) && Displace.exe
+	$(CC) $(CFLAGS) -o Displace.exe $(SRC) $(LDFLAGS) && $(BINARY)
  
 clean:
-	del /Q  *.o main.exe
+	del /Q  *.o $(BINARY)
