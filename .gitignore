@@ -1,0 +1,10 @@
+# Vulkan SDK files — include in release manually
+vulkan/
+
+# Build output
+*.exe
+*.o
+
+# Windows noise
+Thumbs.db
+Desktop.ini
