@@ -1,4 +1,4 @@
-# S2 Display Driver
+# Displace
 
 A minimal Vulkan display driver for Windows. No frameworks, no bloat — just a raw Win32 window, a manually loaded Vulkan ICD, and direct GPU access.
 
